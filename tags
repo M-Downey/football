@@ -13,6 +13,8 @@ BLUE	common/color.h	20;"	d
 BallStatus	common/datatype.h	/^struct BallStatus{$/;"	s
 Bpoint	common/datatype.h	/^struct Bpoint{$/;"	s
 Ctl	common/datatype.h	/^struct Ctl {$/;"	s
+DBG	common/common.h	16;"	d
+DBG	common/common.h	18;"	d
 FT_ACK	common/datatype.h	83;"	d
 FT_CTL	common/datatype.h	84;"	d
 FT_FIN	common/datatype.h	88;"	d
@@ -52,6 +54,7 @@ _STORE_SCORE_H	common/store_score.h	9;"	d
 _SUB_REACTOR_H	common/sub_reactor.h	9;"	d
 _THREAD_POOL_H	common/thread_pool.h	9;"	d
 _UDP_CLIENT_H	common/udp_client.h	9;"	d
+_UDP_EPOLL_H	common/udp_epoll.h	9;"	d
 _UDP_SERVER_H	common/udp_server.h	9;"	d
 a	common/datatype.h	/^    struct Aspeed a;$/;"	m	struct:BallStatus	typeref:struct:BallStatus::Aspeed
 action	common/datatype.h	/^    int action;$/;"	m	struct:Ctl
@@ -93,6 +96,7 @@ name	common/datatype.h	/^    char name[20];$/;"	m	struct:FootBallMsg
 name	common/datatype.h	/^    char name[20];$/;"	m	struct:LogRequest
 name	common/datatype.h	/^    char name[20];$/;"	m	struct:User
 online	common/datatype.h	/^    int online;\/\/ 1 在线 0 不在线$/;"	m	struct:User
+port	server/server.c	/^int port = 0;$/;"	v
 red	common/datatype.h	/^    int red;$/;"	m	struct:Score
 repollfd	server/server.c	/^int repollfd, bepollfd;$/;"	v
 rteam	server/server.c	/^struct User *rteam, *bteam;$/;"	v	typeref:struct:User
@@ -123,6 +127,8 @@ thread_run	common/thread_pool.c	/^void *thread_run(void *arg) {$/;"	f
 timestamp	common/store_score.c	/^long timestamp() {$/;"	f
 type	common/datatype.h	/^    int type;  \/\/ type & FT_HEART$/;"	m	struct:FootBallMsg
 type	common/datatype.h	/^    int type; \/\/ 0 OK 1 NO$/;"	m	struct:LogResponse
+udp_accept	common/udp_epoll.c	/^int udp_accept(int fd, struct User *user) {$/;"	f
+udp_connect	common/udp_epoll.c	/^int udp_connect(struct sockaddr_in *client) {$/;"	f
 v	common/datatype.h	/^    struct Speed v;$/;"	m	struct:BallStatus	typeref:struct:BallStatus::Speed
 who	common/datatype.h	/^    int who;\/\/which队伍$/;"	m	struct:BallStatus
 width	common/datatype.h	/^    int width;$/;"	m	struct:Map
